@@ -6,7 +6,7 @@
       @if(isset($guest)) value="{{ $guest->firstname }}" @endif>
     </div>
     <div class="form-group">
-      <label for="lastnameInput">القب</label>
+      <label for="lastnameInput">اللقب</label>
       <input class="form-control" name="lastname" id="lastnameInput"  autocomplete="off" type="text" required
       @if(isset($guest)) value="{{ $guest->lastname }}" @endif>
     </div>
@@ -32,4 +32,3 @@
     </div>
   </div>
 </div>
-

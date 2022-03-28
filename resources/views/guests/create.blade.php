@@ -1,8 +1,7 @@
 @extends('layout.base')
 
 @section('content')
-<h1>Gast</h1>
-
+<h1>ضيف</h1>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -12,7 +11,6 @@
         </ul>
     </div>
 @endif
-
 @if(isset($guest))
   <form action="{{ route('guest.edit', [$booking->id, $guest->id]) }}" method="POST">
 @else
@@ -29,5 +27,4 @@
     @endif
   </fieldset>
 </form>
-
 @endsection

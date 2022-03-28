@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }} نظام الحجوزات</title>
+        <title>@hasSection('title')@yield('title') - @endif نظام الحجوزات</title>
 
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/app.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/print.css">
@@ -44,7 +44,7 @@
                         @endcan
                         @can('access.admin')
                         <li class="nav-item @if (strstr('admin', Request::path())) active @endif">
-                            <a class="nav-link" href="{{ route('admin') }}">مشرف</a>
+                            <a class="nav-link" href="{{ route('admin') }}">المشرف</a>
                         </li>
                         @endcan
                         <li class="nav-item">
@@ -61,7 +61,7 @@
                     </ul>
                     <form action="{{ route('booking.search') }}" method="GET" class="form-inline my-2 my-lg-0">
                         {{-- {{ csrf_field() }} --}}
-                        <input class="form-control mr-sm-2 search__input" placeholder="بحث عن حجز... (min. 3 karakters)" type="text" name="search" value="{{ app('request')->input('search') }}" pattern=".{3,}" title="min. 3 karakters" required>
+                        <input class="form-control mr-sm-2 search__input" placeholder="بحث عن حجز... ( على الاقل 3 حروف)" type="text" name="search" value="{{ app('request')->input('search') }}" pattern=".{3,}" title="min. 3 karakters" required>
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">بحث</button>
                     </form>
                     @endif

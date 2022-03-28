@@ -66,7 +66,7 @@ $('#printBtn').click(() => {
 });
 
 $('#customerSelect').select2({
-  placeholder: 'Selecteer gast...',
+  placeholder: 'اختر ضيف...',
   theme: 'bootstrap',
 });
 
@@ -80,7 +80,7 @@ $('#customerSelect').on('select2:select', (e) => {
 });
 
 $('.js-extra-guest-select').select2({
-  placeholder: 'Selecteer gast...',
+  placeholder: 'حدد الضيف...',
   theme: 'bootstrap',
   dropdownParent: $('#extraGuestModal'),
 });

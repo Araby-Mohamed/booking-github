@@ -1,6 +1,6 @@
 @extends('layout.base')
 @section('content')
-<h1>Admin</h1>
+<h1>المشرف</h1>
 @if (session('success'))
     <div class="alert alert-dismissable alert-success">
         {{ session('success') }}
@@ -23,22 +23,22 @@
 @endif
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link active show" data-toggle="tab" href="#profile">Profiel</a>
+        <a class="nav-link active show" data-toggle="tab" href="#profile">حساب تعريفي</a>
     </li>
     @can('edit.users')
     <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#users">المستعملs</a>
+        <a class="nav-link" data-toggle="tab" href="#users">المستخدمين</a>
     </li>
     @endcan
     <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#password">Wachtwoord veranderen</a>
+        <a class="nav-link" data-toggle="tab" href="#password">تغيير كلمة المرور</a>
     </li>
 </ul>
 <div class="row mt-4">
     <div class="col">
         <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade show active" id="profile">
-            <a href="{{ route('profile.update') }}" class="btn btn-success">Profiel aanpassen</a>
+            <a href="{{ route('profile.update') }}" class="btn btn-success">تعديل الملف الشخصي</a>
             <table class="table table-hover mt-4">
                 <tr>
                     <th>الاسم</th>
@@ -58,7 +58,7 @@
         </div>
         @can('edit.users')
         <div class="tab-pane fade" id="users">
-            <a href="{{ route('user.create') }}" class="btn btn-success">Gebruiker toevoegen</a>
+            <a href="{{ route('user.create') }}" class="btn btn-success">إضافة مستخدم</a>
             <table class="table table-hover mt-4">
                 <thead>
                 <tr>

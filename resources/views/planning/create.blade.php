@@ -68,7 +68,7 @@
       </div>
       <div class="form-group">
         <label for="customerSelect">الحجز الرئيسي</label>
-        <select class="form-control custom-select" name="customer" id="customerSelect" placeholder="Selecteer gast...">
+        <select class="form-control custom-select" name="customer" id="customerSelect" placeholder="حدد الضيف...">
           <option></option>
           <option value="new-guest">ضيف جديد...</option>
           @foreach($guests as $guest)

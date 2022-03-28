@@ -184,7 +184,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <select class="form-control custom-select mt-2 js-extra-guest-select" name="extra-guest" placeholder="Selecteer gast..." id="guestSelect">
+        <select class="form-control custom-select mt-2 js-extra-guest-select" name="extra-guest" placeholder="حدد الضيف..." id="guestSelect">
           <option></option>
           <option value="new-guest">ضيف جديد...</option>
           @foreach($guests as $guest)

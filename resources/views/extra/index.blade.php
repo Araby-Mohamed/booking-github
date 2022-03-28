@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('content')
-<h1>Extra's</h1>
+<h1>إضافات</h1>
 
 <p><a href="{{ route('extra.create') }}" type="button" class="btn btn-primary">أضف المزيد</a></p>
 
@@ -10,8 +10,8 @@
     <tr>
         <th>الاسم</th>
         <th>السعر</th>
-        <th>Per</th>
-        <th>Icoon</th>
+        <th>لكل</th>
+        <th>أيقونة</th>
         <th width="5%"></th>
     </tr>
     </thead>
@@ -25,9 +25,9 @@
             <td>
                 <div class="btn-group" role="group">
                     <a href="{{ route('extra.edit', $extra->id) }}"
-                        class="btn btn-success btn-sm">Aanpassen</a>
+                        class="btn btn-success btn-sm">التعديل</a>
                     <a href="{{ route('extra.delete', $extra->id) }}"
-                        class="btn btn-success btn-sm btn-danger"><i class="fa fa-trash-alt"></i></a>
+                        class="btn btn-success btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                 </div>
             </td>
         </tr>

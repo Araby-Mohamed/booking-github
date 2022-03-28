@@ -1,6 +1,6 @@
 @extends('layout.base')
 @section('content')
-<h1>Gebruiker</h1>
+<h1>المستخدمين</h1>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -47,13 +47,13 @@
             </div>
             @if(!isset($user))
             <div class="form-group row">
-                <label for="password" class="col-sm-4 col-form-label">Wachtwoord</label>
+                <label for="password" class="col-sm-4 col-form-label">كلمه السر</label>
                 <div class="col-sm-8">
                 <input id="password" type="password" class="form-control" name="password" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="password_confirmation" class="col-sm-4 col-form-label">Herhaal wachtwoord</label>
+                <label for="password_confirmation" class="col-sm-4 col-form-label">اعد كلمة السر</label>
                 <div class="col-sm-8">
                 <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
                 </div>

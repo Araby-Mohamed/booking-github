@@ -8,7 +8,7 @@
   <div class="form-row">
     <div class="form-group col-md-3">
       <div class="form-group">
-        <label for="statType">اكتب</label>
+        <label for="statType">النوع</label>
           <select class="custom-select" name="type" id="statType">
             <option value="{{ StatsController::GUESTS_PER_COUNTRY }}"
                 @isset($type) @if($type === StatsController::GUESTS_PER_COUNTRY) selected @endif @endisset>الضيوف حسب الدولة</option>
@@ -45,7 +45,7 @@
   <div class="form-row">
     <div class="form-group col-md-9">
       <div class="form-group">
-        <p>غرف</p>
+        <p>الغرف</p>
         @foreach ($rooms as $room)
           <div class="custom-control custom-checkbox">
             <input class="custom-control-input" type="checkbox"
@@ -65,10 +65,10 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>دولة</th>
+            <th>الدولة</th>
             <th>الحجوزات</th>
             <th>ضيوف</th>
-            <th>متوسط ضيوف لكل حجز</th>
+            <th>متوسط الضيوف لكل حجز</th>
         </tr>
         </thead>
         <tbody>
