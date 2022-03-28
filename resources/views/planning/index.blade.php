@@ -15,7 +15,7 @@
         <a href="{{ route('planning', ['date' => $dates[0]['date']->copy()->addWeek()->toDateString()]) }}" class="btn btn-primary" id="btn__next"><i class="fa fa-chevron-right"></i></a>
       </div>
 
-      <a href="{{ route('planning') }}" class="btn btn-secondary mb-2">Vandaag</a>
+      <a href="{{ route('planning') }}" class="btn btn-secondary mb-2">اليوم</a>
     </div>
     <form action="{{ route('planning.change_date') }}" class="form-inline d-inline-flex  justify-content-center mb-2" method="POST">
       {{ csrf_field() }}
