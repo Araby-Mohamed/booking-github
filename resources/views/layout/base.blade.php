@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }} Booking System</title>
+        <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }} نظام الحجوزات</title>
 
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/app.css">
         <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/print.css">
@@ -18,7 +18,7 @@
     <body>
         @section('nav')
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="/">{{ config('app.name') }}</a>
+                <a class="navbar-brand" href="/">Booking Devnile</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,7 +26,7 @@
                     @if (!Auth::guest())
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item @if (strstr('/', Request::path())) active @endif">
-                            <a class="nav-link" href="{{ route('welcome') }}">Home</a>
+                            <a class="nav-link" href="{{ route('welcome') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item @if (strstr('برنامج', Request::path())) active @endif">
                             <a class="nav-link" href="{{ route('planning') }}">برنامج</a>
@@ -36,22 +36,22 @@
                             <a class="nav-link" href="{{ route('rooms') }}">الغرف</a>
                         </li>
                         <li class="nav-item @if (strstr('extras', Request::path())) active @endif">
-                            <a class="nav-link" href="{{ route('extra') }}">Extra's</a>
+                            <a class="nav-link" href="{{ route('extra') }}">إضافات</a>
                         </li>
                         <li class="nav-item @if (strstr('stats', Request::path())) active @endif">
-                            <a class="nav-link" href="{{ route('stats') }}">Statistieken</a>
+                            <a class="nav-link" href="{{ route('stats') }}">إحصائيات</a>
                         </li>
                         @endcan
                         @can('access.admin')
                         <li class="nav-item @if (strstr('admin', Request::path())) active @endif">
-                            <a class="nav-link" href="{{ route('admin') }}">Admin</a>
+                            <a class="nav-link" href="{{ route('admin') }}">مشرف</a>
                         </li>
                         @endcan
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/logout') }}"
                                 onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                Logout
+                                تسجيل الخروج
                             </a>
 
                             <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -61,8 +61,8 @@
                     </ul>
                     <form action="{{ route('booking.search') }}" method="GET" class="form-inline my-2 my-lg-0">
                         {{-- {{ csrf_field() }} --}}
-                        <input class="form-control mr-sm-2 search__input" placeholder="Zoek boeking... (min. 3 karakters)" type="text" name="search" value="{{ app('request')->input('search') }}" pattern=".{3,}" title="min. 3 karakters" required>
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Zoek</button>
+                        <input class="form-control mr-sm-2 search__input" placeholder="بحث عن حجز... (min. 3 karakters)" type="text" name="search" value="{{ app('request')->input('search') }}" pattern=".{3,}" title="min. 3 karakters" required>
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">بحث</button>
                     </form>
                     @endif
                 </div>
